@@ -1,3 +1,5 @@
-$name = $_GET("name");
+<?php
 
-printf("Hello bro %s", $name);
+$name = $_GET["name"];
+
+echo "Hello " . $name;
