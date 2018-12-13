@@ -1,9 +1,7 @@
 <?php
 
-$name = $_GET["name"];
+$name = isset($_GET['name']) ? $_GET['name'] : 'World';
 
-echo "Hola " . $name;
+header('Content-Type: text/html; charset=utf-8');
 
-//Aparentemente un comentario que sólo estará en la rama primer_mejora
-
-//Le llamo tercera mejora pero es la segunda, igual sirve para probar.
+printf('Hello %s', htmlspecialchars($name, ENT_QUOTES, 'UTF-8'));
